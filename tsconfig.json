@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-confirm-box": [
+        "dist/ngx-confirm-box"
+      ],
+      "ngx-confirm-box/*": [
+        "dist/ngx-confirm-box/*"
+      ]
+    }
   }
 }
