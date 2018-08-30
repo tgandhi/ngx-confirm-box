@@ -33,16 +33,16 @@ export class NgxConfirmBoxComponent implements OnInit {
   }
 
   hideConfirm(){
-    this.confirmContent     = '';
-    this.confirmHeading     = '';
-    this.confirmCanceltext  = '';
-    this.confirmOkaytext    = '';
-    this.showHide           = false;
+    this.confirmaray.confirmContent     = '';
+    this.confirmaray.confirmHeading     = '';
+    this.confirmaray.confirmCanceltext  = '';
+    this.confirmaray.confirmOkaytext    = '';
+    this.confirmaray.showHide           = false;
     this.confirmEvt.emit(false); 
   }
 
   returConfirmBox(){
-    this.showHide    = false;
+    this.confirmaray.showHide    = false;
     this.confirmEvt.emit(true);   
   }
 

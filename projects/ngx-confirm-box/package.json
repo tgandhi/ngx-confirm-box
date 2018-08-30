@@ -1,9 +1,25 @@
 {
   "name": "ngx-confirm-box",
-  "description": "",
+  "description": "Library for confirm box - Angular 4/5/6",  
+  "keywords": [
+    "angular",
+    "angular4",
+    "angular5",
+    "angular6",
+    "Confirm",
+    "Confirm box",
+    "Confirmation"
+  ],
+  "author": "Gandhi T",
+  "license": "MIT",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/tgandhi/ngx-confirm-box.git"
   }
+
 }

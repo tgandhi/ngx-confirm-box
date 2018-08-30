@@ -5,12 +5,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NgxConfirmBoxService {
-  private confirmChange = new Subject<boolean>();
+  private confirmChange = new Subject<any>();
 
   constructor() { }
-  show(bgColor:'rgba(0,0,0,0.5)',confirmHeading:string,confirmContent:string,confirmCanceltext:string,confirmOkaytext:string) {
-    //this.confirmChange.next(true);
-    this.confirmChange.next({ bgColor:bgColor,confirmHeading: confirmHeading,confirmContent:confirmContent,confirmCanceltext:confirmCanceltext,confirmOkaytext:confirmOkaytext,show:true });
+  show(bgColor:string='rgba(0,0,0,0.5)',Heading:string,Content:string,Canceltext:string,Okaytext:string) {
+    this.confirmChange.next({ bgColor: bgColor,confirmHeading: Heading,confirmContent: Content,confirmCanceltext: Canceltext,confirmOkaytext: Okaytext,show:true });
   }
 
   hide(){

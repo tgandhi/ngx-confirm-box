@@ -55,6 +55,9 @@ Third parameter  | This is representing   message what you want to show in confi
 Fourth parameter | This is representing  reject button text in confirm box, Default  value is `Cancel` | mantatory
 Fifth parameter  | This is representing  accept button text in confirm box, Default  value is `OKay` | mantatory
 
+## Dependency modules
+
+This package used Bootstrap for the styles, Make sure your project is imported with bootstrap
 
 ## License
 The MIT License (MIT)
