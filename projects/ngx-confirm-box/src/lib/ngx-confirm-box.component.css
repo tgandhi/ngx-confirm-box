@@ -13,7 +13,7 @@
   position: absolute;
   top: 40%;
   left: 40%;
-  width:250px;
+  width:300px;
   background: #fff;
   padding: 15px;
   border-radius: 6px;
@@ -23,8 +23,13 @@
   padding: 0px 0px 10px;
   margin: 5px;
   border-bottom: 1px solid #c5c5c6;
+  font-size: 18px;
 }
 .confirmbox-container p{
   margin: 0px;
   padding: 3px;
+  text-align:center;
 }
+
+.btn-grp{ text-align:center; padding-top:10px;}
+.confirm-btn{ margin:0px 10px;}

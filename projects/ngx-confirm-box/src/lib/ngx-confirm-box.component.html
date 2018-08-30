@@ -1,8 +1,9 @@
-<div class="overlay" [ngStyle]="{'background-color':bgColor}" *ngIf="showHide" >
+<div class="overlay" [ngStyle]="{'background-color':confirmaray.bgColor}" *ngIf="showHide" >
     <div class="confirmbox-container">
-	<h3>{{confirmHeading}}</h3>
-	<p>{{confirmContent}}</p>
-	<button class="btn-default btn btn-sm" (click)="hideConfirm()">{{confirmCanceltext}}</button>
-	<button class="btn-primary btn float-right btn-sm" (click)="returConfirmBox()">{{confirmOkaytext}}</button>
+	<h3 *ngIf="confirmaray.confirmHeading">{{confirmaray.confirmHeading}}</h3>
+	<p>{{confirmaray.confirmContent}}</p>
+	<div class="col-md-12 btn-grp col-sm-12">
+	<button class="cancel-btn btn-default btn btn-sm" (click)="hideConfirm()">{{confirmaray.confirmCanceltext}}</button>
+	<button class="btn-primary btn btn-sm confirm-btn" (click)="returConfirmBox()">{{confirmaray.confirmOkaytext}}</button></div>
 	</div>
 </div>

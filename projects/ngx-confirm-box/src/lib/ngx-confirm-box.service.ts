@@ -8,10 +8,9 @@ export class NgxConfirmBoxService {
   private confirmChange = new Subject<boolean>();
 
   constructor() { }
-
-  show() {
-    
-    this.confirmChange.next(true);
+  show(bgColor:'rgba(0,0,0,0.5)',confirmHeading:string,confirmContent:string,confirmCanceltext:string,confirmOkaytext:string) {
+    //this.confirmChange.next(true);
+    this.confirmChange.next({ bgColor:bgColor,confirmHeading: confirmHeading,confirmContent:confirmContent,confirmCanceltext:confirmCanceltext,confirmOkaytext:confirmOkaytext,show:true });
   }
 
   hide(){

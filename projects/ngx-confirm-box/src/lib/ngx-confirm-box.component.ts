@@ -10,23 +10,26 @@ import{ NgxConfirmBoxService} from './ngx-confirm-box.service';
 })
 export class NgxConfirmBoxComponent implements OnInit {
 
-  @Input() bgColor            = 'rgba(0,0,0,0.5)'; //overlay background color
-  @Input() confirmContent     = 'Are you sure want to delete this?'; 
-  @Input() confirmHeading     = 'Confirmation'; 
-  @Input() confirmCanceltext  = 'No'; 
-  @Input() confirmOkaytext    = 'Yes'; 
+  // @Input() bgColor            = 'rgba(0,0,0,0.5)'; //overlay background color
+  // @Input() confirmContent     = 'Are you sure want to delete this?'; 
+  // @Input() confirmHeading     = 'Confirmation'; 
+  // @Input() confirmCanceltext  = 'No'; 
+  // @Input() confirmOkaytext    = 'Yes'; 
 
+  //confirmHeading:string;
   showHide  = false; 
   returnval = false; 
 
+  confirmaray:any = {bgColor:'rgba(0,0,0,0.5)',confirmHeading:'',confirmContent:'Are you sure want to delete this?',confirmCanceltext:'No',confirmOkaytext:'Yes',show:this.showHide};
   subscription: Subscription;
   
   constructor(private confirmService : NgxConfirmBoxService) { 
-    this.subscription =this.confirmService.getState().subscribe( showHide => {this.showHide = showHide });
+    this.subscription =this.confirmService.getState().subscribe( confirmaray => {this.confirmaray = confirmaray });
   }
   @Output() confirmEvt = new EventEmitter<boolean>();
   ngOnInit() {
-    //this.showHide=true;
+    console.log(this.confirmaray.show);
+    this.showHide = this.confirmaray.show;
   }
 
   hideConfirm(){
