@@ -28,8 +28,14 @@ import { NgxConfirmBoxService } from 'ngx-confirm-box';
 export class AppComponent implements OnInit {
   constructor(private confirmBox: NgxConfirmBoxService) { }
 
+  bgColor           ='rgba(0,0,0,0.5)'; // overlay background color
+  confirmHeading    = '';
+  confirmContent    = "Are you sure want to delete tsddshis?";
+  confirmCanceltext = "Cancel";
+  confirmOkaytext   = "Okay";
+
     yourMethod(){
-        this.confirmBox.show('rgba(0,0,0,0.5)','Confirmation','Are you sure want to delete this?','No','Yes');
+        this.confirmBox.show();
     }
 
     confirmChange(showConfirm:boolean){
@@ -37,23 +43,23 @@ export class AppComponent implements OnInit {
             //Your code goes here
         }
     }
-  }
 
 }
 
 ```
 In Template Use the directive
 ```html
-<ngx-confirm-box (confirmEvt)="confirmChange($event)"></ngx-confirm-box>
+<!-- <ngx-confirm-box (confirmEvt)="confirmChange($event)"></ngx-confirm-box> -->
+<ngx-confirm-box [bgColor]="bgColor" [confirmHeading]="confirmHeading" [confirmCanceltext]="confirmCanceltext" [confirmContent]= "confirmContent" [confirmOkaytext] = "confirmOkaytext" (confirmEvt)="confirmChange($event)"></ngx-confirm-box>
 ```
 ## Customization
-Propery | Uses | Preference |
+Propery | Uses | 
 --- | --- | --- |
-First parameter  | Used to change the background color of overlay div, It uses rgba value, Default value is `rgba(0,0,0,0.5)` | mantatory
-Second parameter | This is representing title of confirm box, Default  value is `''` | mantatory
-Third parameter  | This is representing   message what you want to show in confirm box, Default  value is `Are you sure want to delete this?` | mantatory
-Fourth parameter | This is representing  reject button text in confirm box, Default  value is `Cancel` | mantatory
-Fifth parameter  | This is representing  accept button text in confirm box, Default  value is `OKay` | mantatory
+bgColor  | Used to change the background color of overlay div, It uses rgba value, Default value is `rgba(0,0,0,0.5)` | 
+confirmHeading | This is representing title of confirm box, Default  value is `''` | 
+confirmContent  | This is representing   message what you want to show in confirm box, Default  value is `Are you sure want to delete this?` | 
+confirmCanceltext | This is representing  reject button text in confirm box, Default  value is `Cancel` | 
+confirmOkaytext  | This is representing  accept button text in confirm box, Default  value is `OKay` | 
 
 ## Dependency modules
 

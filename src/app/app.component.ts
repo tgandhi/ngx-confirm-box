@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import{ NgxConfirmBoxService} from 'ngx-confirm-box';
 import {NgxConfirmBoxService} from '../../projects/ngx-confirm-box/src/public_api';
 @Component({
   selector: 'app-root',
@@ -11,13 +10,15 @@ export class AppComponent implements OnInit {
   constructor(private ngconfirm: NgxConfirmBoxService) { }
 
   bgColor           ='rgba(0,0,0,0.5)'; // overlay background color
-  confirmHeading    = 'sad';
+  confirmHeading    = '';
   confirmContent    = "Are you sure want to delete this?";
   confirmCanceltext = "Cancel";
   confirmOkaytext   = "Okay";
-  
   ngOnInit(){
-    this.ngconfirm.show(this.bgColor,this.confirmHeading,this.confirmContent,this.confirmCanceltext,this.confirmOkaytext);
+    
+  }
+  yourmethod(){
+    this.ngconfirm.show();
   }
 
   confirmChange(showConfirm:boolean){    
